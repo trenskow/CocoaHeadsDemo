@@ -88,5 +88,13 @@ class ViewController: UIViewController {
         rotateAnimation(true).then(animation: rotateAnimation(false))
     }
     
+    @IBAction func doAllButtonTouchUpInside(sender: UIButton) {
+        (growAnimation().and(animation: rotateAnimation(true)))
+            .then(animation: shrinkAnimation().and(animation: rotateAnimation(false)))
+            .completed { (animation) -> Void in
+                print("Grow + Rotate + Shrink Done")
+        }
+    }
+    
 }
 
