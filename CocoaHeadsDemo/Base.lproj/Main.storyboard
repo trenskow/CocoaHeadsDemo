@@ -29,14 +29,21 @@
                                 <rect key="frame" x="0.0" y="550" width="600" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNV-UU-Y1Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
                                         <state key="normal" title="Grow"/>
                                         <connections>
                                             <action selector="growButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVa-cg-NdB"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jG9-OV-L3m">
+                                        <rect key="frame" x="200" y="0.0" width="200" height="50"/>
+                                        <state key="normal" title="Grow | Shrink"/>
+                                        <connections>
+                                            <action selector="growAndShrinkButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICL-Hp-6pV"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4x-92-ChD">
-                                        <rect key="frame" x="300" y="0.0" width="300" height="50"/>
+                                        <rect key="frame" x="400" y="0.0" width="200" height="50"/>
                                         <state key="normal" title="Shrink"/>
                                         <connections>
                                             <action selector="shrinkButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GH2-og-KTh"/>

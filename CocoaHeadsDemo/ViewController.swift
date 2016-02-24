@@ -18,25 +18,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    @IBAction func growButtonTouchUpInside(sender: UIButton) {
-        
-        Slaminate(
+    
+    func growAnimation() -> Animation {
+        return Slaminate(
             duration: 0.5,
             curve: Curve.easeOutBack,
             animation: {
                 self.heightConstraint.constant *= 2.0
                 self.widthConstraint.constant *= 2.0
             }
-        ).completed({ animation in
-            print("Grow complete")
-        })
-        
+            ).completed({ animation in
+                print("Grow complete")
+            }
+        )
     }
     
-    @IBAction func shrinkButtonTouchUpInside(sender: UIButton) {
-        
-        Slaminate(
+    func shrinkAnimation() -> Animation {
+        return Slaminate(
             duration: 0.5,
             curve: Curve.easeInBack,
             animation: {
@@ -45,8 +43,23 @@ class ViewController: UIViewController {
             }
             ).completed({ animation in
                 print("Shrink complete")
+            }
+        )
+    }
+
+    @IBAction func growButtonTouchUpInside(sender: UIButton) {
+        growAnimation()
+    }
+    
+    @IBAction func shrinkButtonTouchUpInside(sender: UIButton) {
+        shrinkAnimation()
+    }
+    
+    @IBAction func growAndShrinkButtonTouchUpInside(sender: UIButton) {
+        growAnimation().then(animation: shrinkAnimation())
+            .completed({ _ in
+                print("Both done")
             })
-        
     }
     
 }
