@@ -7,19 +7,47 @@
 //
 
 import UIKit
+import Slaminate
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var cat: UIImageView!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func growButtonTouchUpInside(sender: UIButton) {
+        
+        Slaminate(
+            duration: 0.5,
+            curve: Curve.easeOutBack,
+            animation: {
+                self.heightConstraint.constant *= 2.0
+                self.widthConstraint.constant *= 2.0
+            }
+        ).completed({ animation in
+            print("Grow complete")
+        })
+        
     }
-
-
+    
+    @IBAction func shrinkButtonTouchUpInside(sender: UIButton) {
+        
+        Slaminate(
+            duration: 0.5,
+            curve: Curve.easeInBack,
+            animation: {
+                self.heightConstraint.constant /= 2.0
+                self.widthConstraint.constant /= 2.0
+            }
+            ).completed({ animation in
+                print("Shrink complete")
+            })
+        
+    }
+    
 }
 

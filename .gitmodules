@@ -1,0 +1,3 @@
+[submodule "Slaminate"]
+	path = Slaminate
+	url = https://github.com/trenskow/Slaminate.git

@@ -12,7 +12,48 @@
 		A17A195B1C7E24E40036F485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A17A19591C7E24E40036F485 /* Main.storyboard */; };
 		A17A195D1C7E24E40036F485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A17A195C1C7E24E40036F485 /* Assets.xcassets */; };
 		A17A19601C7E24E40036F485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A17A195E1C7E24E40036F485 /* LaunchScreen.storyboard */; };
+		A17A196F1C7E25B70036F485 /* Slaminate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17A196C1C7E25610036F485 /* Slaminate.framework */; };
+		A17A19701C7E25B70036F485 /* Slaminate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A17A196C1C7E25610036F485 /* Slaminate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A17A19751C7E26080036F485 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A17A19741C7E26080036F485 /* cat.jpg */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A17A196B1C7E25610036F485 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A17A19671C7E25610036F485 /* Slaminate.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1591B641C6B0329001687F6;
+			remoteInfo = Slaminate;
+		};
+		A17A196D1C7E25AB0036F485 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A17A19671C7E25610036F485 /* Slaminate.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A1591B631C6B0329001687F6;
+			remoteInfo = Slaminate;
+		};
+		A17A19711C7E25B70036F485 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A17A19671C7E25610036F485 /* Slaminate.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A1591B631C6B0329001687F6;
+			remoteInfo = Slaminate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A17A19731C7E25B70036F485 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A17A19701C7E25B70036F485 /* Slaminate.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A17A19521C7E24E40036F485 /* CocoaHeadsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaHeadsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +63,8 @@
 		A17A195C1C7E24E40036F485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A17A195F1C7E24E40036F485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A17A19611C7E24E40036F485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A17A19671C7E25610036F485 /* Slaminate.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Slaminate.xcodeproj; path = Slaminate/Slaminate.xcodeproj; sourceTree = SOURCE_ROOT; };
+		A17A19741C7E26080036F485 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A17A196F1C7E25B70036F485 /* Slaminate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +98,24 @@
 		A17A19541C7E24E40036F485 /* CocoaHeadsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A17A19741C7E26080036F485 /* cat.jpg */,
 				A17A19551C7E24E40036F485 /* AppDelegate.swift */,
 				A17A19571C7E24E40036F485 /* ViewController.swift */,
 				A17A19591C7E24E40036F485 /* Main.storyboard */,
 				A17A195C1C7E24E40036F485 /* Assets.xcassets */,
 				A17A195E1C7E24E40036F485 /* LaunchScreen.storyboard */,
 				A17A19611C7E24E40036F485 /* Info.plist */,
+				A17A19671C7E25610036F485 /* Slaminate.xcodeproj */,
 			);
 			path = CocoaHeadsDemo;
+			sourceTree = "<group>";
+		};
+		A17A19681C7E25610036F485 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A17A196C1C7E25610036F485 /* Slaminate.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,10 +128,13 @@
 				A17A194E1C7E24E40036F485 /* Sources */,
 				A17A194F1C7E24E40036F485 /* Frameworks */,
 				A17A19501C7E24E40036F485 /* Resources */,
+				A17A19731C7E25B70036F485 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A17A196E1C7E25AB0036F485 /* PBXTargetDependency */,
+				A17A19721C7E25B70036F485 /* PBXTargetDependency */,
 			);
 			name = CocoaHeadsDemo;
 			productName = CocoaHeadsDemo;
@@ -110,12 +167,28 @@
 			mainGroup = A17A19491C7E24E40036F485;
 			productRefGroup = A17A19531C7E24E40036F485 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A17A19681C7E25610036F485 /* Products */;
+					ProjectRef = A17A19671C7E25610036F485 /* Slaminate.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A17A19511C7E24E40036F485 /* CocoaHeadsDemo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A17A196C1C7E25610036F485 /* Slaminate.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Slaminate.framework;
+			remoteRef = A17A196B1C7E25610036F485 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A17A19501C7E24E40036F485 /* Resources */ = {
@@ -124,6 +197,7 @@
 			files = (
 				A17A19601C7E24E40036F485 /* LaunchScreen.storyboard in Resources */,
 				A17A195D1C7E24E40036F485 /* Assets.xcassets in Resources */,
+				A17A19751C7E26080036F485 /* cat.jpg in Resources */,
 				A17A195B1C7E24E40036F485 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +215,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A17A196E1C7E25AB0036F485 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Slaminate;
+			targetProxy = A17A196D1C7E25AB0036F485 /* PBXContainerItemProxy */;
+		};
+		A17A19721C7E25B70036F485 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Slaminate;
+			targetProxy = A17A19711C7E25B70036F485 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A17A19591C7E24E40036F485 /* Main.storyboard */ = {
@@ -247,6 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = CocoaHeadsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.trenskow.CocoaHeadsDemo;
@@ -258,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = CocoaHeadsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.trenskow.CocoaHeadsDemo;
