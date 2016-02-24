@@ -15,8 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var slider: UISlider!
+    
+    var animation: Animation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        resetButtonTouchUpInside(nil)
     }
     
     func growAnimation() -> Animation {
@@ -49,7 +54,7 @@ class ViewController: UIViewController {
     
     func rotateAnimation(left: Bool) -> Animation {
         return Slaminate(
-            duration: 0.3,
+            duration: 0.5,
             curve: Curve.easeInOutSine,
             animation: { _ in
                 self.cat.transform = CGAffineTransformMakeRotation(
@@ -59,6 +64,14 @@ class ViewController: UIViewController {
         ).completed({ _ in
             print("Rotate complete")
         })
+    }
+    
+    func all() -> Animation {
+        return (growAnimation().and(animation: rotateAnimation(true)))
+            .then(animation: shrinkAnimation().and(animation: rotateAnimation(false)))
+            .completed { (animation) -> Void in
+                print("Grow + Rotate + Shrink Done")
+        }
     }
 
     @IBAction func growButtonTouchUpInside(sender: UIButton) {
@@ -89,11 +102,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func doAllButtonTouchUpInside(sender: UIButton) {
-        (growAnimation().and(animation: rotateAnimation(true)))
-            .then(animation: shrinkAnimation().and(animation: rotateAnimation(false)))
-            .completed { (animation) -> Void in
-                print("Grow + Rotate + Shrink Done")
-        }
+        all()
+    }
+    
+    @IBAction func resetButtonTouchUpInside(sender: UIButton?) {
+        slider.value = 0.0
+        animation = all().manual()
+    }
+    
+    @IBAction func goButtonTouchUpInside(sender: UIButton) {
+        animation?.go()
+    }
+    
+    @IBAction func sliderValueChanged(sender: UISlider) {
+        guard let animation = animation else { return }
+        animation.position = animation.duration * Double(sender.value)
     }
     
 }

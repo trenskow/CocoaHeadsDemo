@@ -92,19 +92,57 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUs-C5-hNG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gat-ou-b9C">
+                                        <rect key="frame" x="-2" y="0.0" width="454" height="51"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="QHy-zP-EzF"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="df1-2B-lad">
+                                        <rect key="frame" x="450" y="0.0" width="80" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="qtS-Nd-ZPc"/>
+                                        </constraints>
+                                        <state key="normal" title="Go"/>
+                                        <connections>
+                                            <action selector="goButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fL2-uy-Fe3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2K-kW-qaE">
+                                        <rect key="frame" x="530" y="0.0" width="70" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="Olo-Ge-Sqm"/>
+                                        </constraints>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E8E-CY-biZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eRF-ve-ASw"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="FyE-j6-nSX" secondAttribute="trailing" id="0gG-pW-C18"/>
+                            <constraint firstItem="uUs-C5-hNG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4ie-Cp-tXn"/>
+                            <constraint firstAttribute="topMargin" secondItem="uUs-C5-hNG" secondAttribute="top" id="9D7-rG-YmW"/>
                             <constraint firstItem="p0J-tz-6Ee" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CLb-3M-x04"/>
                             <constraint firstItem="p0J-tz-6Ee" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X4E-1t-R0i"/>
                             <constraint firstItem="FyE-j6-nSX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hkz-SS-nH2"/>
+                            <constraint firstAttribute="trailing" secondItem="uUs-C5-hNG" secondAttribute="trailing" id="mVu-ZO-ANY"/>
                             <constraint firstAttribute="bottomMargin" secondItem="FyE-j6-nSX" secondAttribute="bottom" id="xRb-dw-ycD"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cat" destination="p0J-tz-6Ee" id="wwz-H2-Kaa"/>
                         <outlet property="heightConstraint" destination="dyw-Zb-ZLN" id="AJP-Fy-mby"/>
+                        <outlet property="slider" destination="Gat-ou-b9C" id="7Ko-L7-dlD"/>
                         <outlet property="widthConstraint" destination="C3t-nH-pd8" id="xGf-cx-NSb"/>
                     </connections>
                 </viewController>
