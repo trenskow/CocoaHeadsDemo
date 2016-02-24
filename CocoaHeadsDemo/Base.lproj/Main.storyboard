@@ -25,43 +25,74 @@
                                     <constraint firstAttribute="height" constant="200" id="dyw-Zb-ZLN"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DEj-ZG-T89">
-                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FyE-j6-nSX">
+                                <rect key="frame" x="0.0" y="500" width="600" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNV-UU-Y1Z">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
-                                        <state key="normal" title="Grow"/>
-                                        <connections>
-                                            <action selector="growButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVa-cg-NdB"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jG9-OV-L3m">
-                                        <rect key="frame" x="200" y="0.0" width="200" height="50"/>
-                                        <state key="normal" title="Grow | Shrink"/>
-                                        <connections>
-                                            <action selector="growAndShrinkButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICL-Hp-6pV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4x-92-ChD">
-                                        <rect key="frame" x="400" y="0.0" width="200" height="50"/>
-                                        <state key="normal" title="Shrink"/>
-                                        <connections>
-                                            <action selector="shrinkButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GH2-og-KTh"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IqU-Fx-yYz">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xz6-fm-HDM">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                <state key="normal" title="Rotate Left"/>
+                                                <connections>
+                                                    <action selector="rotateLeftButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DF0-xZ-oft"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nK2-1v-mHc">
+                                                <rect key="frame" x="200" y="0.0" width="200" height="50"/>
+                                                <state key="normal" title="Left | Right"/>
+                                                <connections>
+                                                    <action selector="rotateLeftAndRightButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kMG-YH-mJa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAU-7S-ccW">
+                                                <rect key="frame" x="400" y="0.0" width="200" height="50"/>
+                                                <state key="normal" title="Rotate Right"/>
+                                                <connections>
+                                                    <action selector="rotateRightButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hDc-xP-5Ky"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DEj-ZG-T89">
+                                        <rect key="frame" x="0.0" y="50" width="600" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNV-UU-Y1Z">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                <state key="normal" title="Grow"/>
+                                                <connections>
+                                                    <action selector="growButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uVa-cg-NdB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jG9-OV-L3m">
+                                                <rect key="frame" x="200" y="0.0" width="200" height="50"/>
+                                                <state key="normal" title="Grow | Shrink"/>
+                                                <connections>
+                                                    <action selector="growAndShrinkButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICL-Hp-6pV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4x-92-ChD">
+                                                <rect key="frame" x="400" y="0.0" width="200" height="50"/>
+                                                <state key="normal" title="Shrink"/>
+                                                <connections>
+                                                    <action selector="shrinkButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GH2-og-KTh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="4fW-1a-xT9"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="4fW-1a-xT9"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="DEj-ZG-T89" secondAttribute="bottom" id="BDg-QW-vUF"/>
+                            <constraint firstAttribute="trailing" secondItem="FyE-j6-nSX" secondAttribute="trailing" id="0gG-pW-C18"/>
                             <constraint firstItem="p0J-tz-6Ee" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CLb-3M-x04"/>
                             <constraint firstItem="p0J-tz-6Ee" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X4E-1t-R0i"/>
-                            <constraint firstItem="DEj-ZG-T89" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kMf-cq-tER"/>
-                            <constraint firstAttribute="trailing" secondItem="DEj-ZG-T89" secondAttribute="trailing" id="nqc-Gj-duK"/>
+                            <constraint firstItem="FyE-j6-nSX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hkz-SS-nH2"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="FyE-j6-nSX" secondAttribute="bottom" id="xRb-dw-ycD"/>
                         </constraints>
                     </view>
                     <connections>

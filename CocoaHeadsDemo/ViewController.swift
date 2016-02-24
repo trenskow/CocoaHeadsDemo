@@ -46,6 +46,20 @@ class ViewController: UIViewController {
             }
         )
     }
+    
+    func rotateAnimation(left: Bool) -> Animation {
+        return Slaminate(
+            duration: 0.3,
+            curve: Curve.easeInOutSine,
+            animation: { _ in
+                self.cat.transform = CGAffineTransformMakeRotation(
+                    CGFloat(M_PI_2) + CGFloat(M_PI_2 * (left ? 1.0 : -1.0))
+                )
+            }
+        ).completed({ _ in
+            print("Rotate complete")
+        })
+    }
 
     @IBAction func growButtonTouchUpInside(sender: UIButton) {
         growAnimation()
@@ -60,6 +74,18 @@ class ViewController: UIViewController {
             .completed({ _ in
                 print("Both done")
             })
+    }
+    
+    @IBAction func rotateLeftButtonTouchUpInside(sender: UIButton) {
+        rotateAnimation(true)
+    }
+    
+    @IBAction func rotateRightButtonTouchUpInside(sender: UIButton) {
+        rotateAnimation(false)
+    }
+    
+    @IBAction func rotateLeftAndRightButtonTouchUpInside(sender: UIButton) {
+        rotateAnimation(true).then(animation: rotateAnimation(false))
     }
     
 }
