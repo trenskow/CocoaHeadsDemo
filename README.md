@@ -1,5 +1,8 @@
 # Slaminate Cocoa Heads Demo
-- Copenhagen Cocao demo project from february 24. 2016
+-
+Cocoa Heads (Copenhagen Cocoa) demo project of Slaminate.
+
+– from talk @ Feb. 24. 2016
 
 ## Clone
 
