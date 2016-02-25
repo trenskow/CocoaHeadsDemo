@@ -1,5 +1,5 @@
 # Slaminate Cocoa Heads Demo
--
+
 Cocoa Heads (Copenhagen Cocoa) demo project of Slaminate.
 
 – from talk @ Feb. 24. 2016
