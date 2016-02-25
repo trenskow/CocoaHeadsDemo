@@ -373,6 +373,7 @@
 				A17A19661C7E24E40036F485 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -17,11 +17,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var slider: UISlider!
     
-    var animation: Animation?
+    var animation: Animation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resetButtonTouchUpInside(nil)
+        resetSlider()
     }
     
     func growAnimation() -> Animation {
@@ -73,6 +73,18 @@ class ViewController: UIViewController {
                 print("Grow + Rotate + Shrink Done")
         }
     }
+    
+    func resetSlider() {
+        slider.value = 0.0
+        animation = all()
+        animation.and(
+            duration: 1.0,
+            curve: nil,
+            animation: {
+                self.slider.setValue(1.0, forKey: "value")
+            }
+        ).manual()
+    }
 
     @IBAction func growButtonTouchUpInside(sender: UIButton) {
         growAnimation()
@@ -105,13 +117,14 @@ class ViewController: UIViewController {
         all()
     }
     
-    @IBAction func resetButtonTouchUpInside(sender: UIButton?) {
-        slider.value = 0.0
-        animation = all().manual()
+    @IBAction func resetButtonTouchUpInside(sender: UIButton) {
+        resetSlider()
     }
     
     @IBAction func goButtonTouchUpInside(sender: UIButton) {
-        animation?.go()
+        animation?.completed({ _ in
+            self.resetSlider()
+        }).go()
     }
     
     @IBAction func sliderValueChanged(sender: UISlider) {
